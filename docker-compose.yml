@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_cancer
+    restart: always
+    environment:
+      POSTGRES_USER: postgres # identique à ton .env
+      POSTGRES_PASSWORD: 1234 # identique à ton .env
+      POSTGRES_DB: projet_cancer # identique à ton .env
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # persistance des données
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
+    driver: bridge
