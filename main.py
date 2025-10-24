@@ -22,7 +22,8 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://projet-cancer-front.onrender.com"
 ]
 
 
