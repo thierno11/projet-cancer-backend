@@ -47,7 +47,7 @@ def get_current_user(
 def create_users(
     utilisateurs: UtilisateurRequest,
     db: Session = Depends(get_db),
-    current_user: Annotated[UtilisateurResponse, Depends(get_current_user)] = None
+    # current_user: Annotated[UtilisateurResponse, Depends(get_current_user)] = None
 ):
     # Vérifie le rôle de l’utilisateur connecté
     # if current_user.role != "admin":
