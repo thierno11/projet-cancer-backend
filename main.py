@@ -1,6 +1,6 @@
 
 from fastapi.middleware.cors import CORSMiddleware
-from controller import utilisateur_controller,dignostic_controller,medecin_controller
+from controller import utilisateur_controller,dignostic_controller,medecin_controller,imagerie_controller
 from fastapi import FastAPI,Depends
 from databases.connection import Base, engine
 
@@ -13,6 +13,7 @@ app = FastAPI()
 app.include_router(utilisateur_controller.routes)
 app.include_router(dignostic_controller.dignostic_router)
 app.include_router(medecin_controller.medecin_router)
+app.include_router(imagerie_controller.analyse_router)
 
 
 
