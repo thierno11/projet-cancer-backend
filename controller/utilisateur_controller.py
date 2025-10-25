@@ -49,15 +49,7 @@ def create_users(
     db: Session = Depends(get_db),
     # current_user: Annotated[UtilisateurResponse, Depends(get_current_user)] = None
 ):
-    # Vérifie le rôle de l’utilisateur connecté
-    # if current_user.role != "admin":
-        # raise HTTPException(
-        #     status_code=status.HTTP_401_UNAUTHORIZED,
-        #     detail="Vous n'êtes pas autorisé à créer un utilisateur",
-        #     headers={"WWW-Authenticate": "Bearer"},
-        # )
     
-    # Création du nouvel utilisateur
     return creer_utilisateurs(utilisateurs, db)
 
 # ------------------------------------------------------
